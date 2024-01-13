@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTB Viewer</title>
+      <script type="module" crossorigin src="/assets/index-63847204.js"></script>
+      <link rel="stylesheet" href="/assets/index-0edeb309.css">
+    </head>
+    <body>
+        <div id="screen" style="display: none"></div>
+
+        <div id="statusText">
+            <div>
+                <img src="/htb-logo.svg" width="600px" /><br />
+                <p id="status">Starting...</p>
+            </div>
+        </div>
+
+        <div
+            id="copyButton"
+            class="copyButton"
+            data-micromodal-trigger="modal-1"
+        >
+            <img width="36" src="/clipboard.png" />
+        </div>
+
+        <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div
+                    class="modal__container"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="modal-1-title"
+                >
+                    <header class="modal__header">
+                        <h2 class="modal__title" id="modal-1-title">
+                            Clipboard
+                        </h2>
+                    </header>
+                    <main class="modal__content" id="modal-1-content">
+                        <p>
+                            This text-box serves as a middle-man for the
+                            clipboard of the Instance for browsers that do not
+                            support Clipboard access. <br />
+                            Anything you copy within the instance will be shown
+                            to this text-box so you can copy it to your system
+                            and vice-versa.
+                        </p>
+                        <p>
+                            <textarea
+                                class="clipboard"
+                                id="clipboard"
+                            ></textarea>
+                        </p>
+                    </main>
+                    <footer class="modal__footer"></footer>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.data = JSON.parse('{"c":true}');
+        </script>
+        
+    </body>
+</html>
